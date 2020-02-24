@@ -2,15 +2,154 @@ import java.util.*
 
 fun main(){
     val sc = Scanner(System.`in`)
-
     val n = sc.nextLine().toInt()
 
+    val matrix = getMatrix(sc, n)
+
+    var cell = findCross(matrix, n)
+
+    val turns = mutableListOf<String>()
+
+    while (cell != null){
+        turns.add("${cell.row + 1} ${cell.col + 1}")
+        change(cell.row, cell.col, matrix, n)
+        cell = findCross(matrix, n)
+    }
+
+
+    while(!isCompleted(matrix, n)){
+        val i = findFullLine(matrix, n)
+
+        val m = transpose(matrix, n)
+
+        val j = findFullLine(m, n)
+
+        turns.add("${i + 1} ${j + 1}")
+        change(i, j, matrix, n)
+
+    }
+
+    println(turns.size)
+    turns.forEach{println(it)}
+}
+
+fun isCompleted(matrix: Array<Array<Char>>, n: Int) : Boolean{
+    var completedRows = 0
+
+    i@for(i in 0 until n){
+        var wCount = 0
+        for(j in 0 until n){
+            if(matrix[i][j] == 'W') {
+                wCount++
+            } else {
+                break@i
+            }
+        }
+        completedRows++
+    }
+
+    if(completedRows == n)
+        return true
+
+    completedRows = 0
+
+    i@for(i in 0 until n){
+        var bCount = 0
+        for(j in 0 until n){
+            if(matrix[i][j] == 'B') {
+                bCount++
+            } else {
+                break@i
+            }
+        }
+        completedRows++
+    }
+
+    if(completedRows == n)
+        return true
+
+    return false
+}
+
+fun findFullLine(matrix: Array<Array<Char>>, n : Int) : Int{
+    for(i in 0 until n) {
+        var wCount = 0
+        var bCount = 0
+        val row = matrix[i]
+        for (j in 0 until n) {
+            if(row[j] == 'W')
+                wCount++
+            else
+                bCount++
+        }
+
+        if (wCount == 4)
+            return i
+        else if (bCount == 4)
+            return i
+    }
+
+    return -1
+}
+
+fun findCross(matrix: Array<Array<Char>>, n : Int) : Cell?{
+    var rowsCountWithW = 0
+    var rowsCountWithB = 0
+
+    var rowWithW = -1
+    var colWithW = -1
+
+    var rowWithB = -1
+    var colWithB = -1
+
+    for(i in 0 until n){
+        if(rowsCountWithW == 2 || rowsCountWithB == 2)
+            break
+
+        var wCount = 0
+        var bCount = 0
+        val row = matrix[i]
+        for(j in 0 until n){
+            if(row[j] == 'W')
+                wCount++
+            else
+                bCount++
+        }
+
+        if(wCount == 1){
+            rowsCountWithW++
+            if(rowWithW == -1){
+                rowWithW = i
+                colWithW = row.indexOf('W')
+            }
+            else if (colWithW != row.indexOf('W'))
+                colWithW = row.indexOf('W')
+            else
+                rowsCountWithW--
+        }
+        else if (bCount == 1){
+            rowsCountWithB++
+            if(rowWithB == -1) {
+                rowWithB = i
+                colWithB = row.indexOf('B')
+            }
+            else if (colWithB != row.indexOf('B'))
+                colWithB = row.indexOf('B')
+            else
+                rowsCountWithB--
+        }
+    }
+
+    return when{
+        (rowsCountWithW == 2) -> Cell(rowWithW, colWithW)
+        (rowsCountWithB == 2) -> Cell(rowWithB, colWithB)
+        else -> null
+    }
+}
+
+
+fun getMatrix(sc : Scanner, n : Int) : Array<Array<Char>>{
     val matrix : Array<Array<Char>> = Array(n) { Array(n) {'0'} }
-
-    val rowIndexes = mutableListOf<Letter>()
-
-    var bRowsCount = 0
-    var wRowsCount = 0
 
     for(i in 0 until n){
         val line = sc.nextLine()
@@ -21,115 +160,13 @@ fun main(){
         var j = 0
 
         line.forEach {
-            if(it == 'W')
-                wCount++
-            else
-                bCount++
             matrix[i][j] = it
             j++
         }
-
-        if(wCount == 1){
-            rowIndexes.add(Letter(i, line.indexOf('W'), 'W'))
-            wRowsCount++
-        }
-        else if(bCount == 1){
-            rowIndexes.add(Letter(i, line.indexOf('B'), 'B'))
-            bRowsCount++
-        }
     }
 
-
-    foo(wRowsCount, bRowsCount, rowIndexes, matrix, n)
-
-
-    
-
-
-    printMatrix(transpose(matrix, n))
+    return matrix
 }
-
-
-fun getRowIndexes(matrix: Array<Array<Char>>, n: Int) : Info{
-    val rowIndexes = mutableListOf<Letter>()
-
-    var bRowsCount = 0
-    var wRowsCount = 0
-
-    for(i in 0 until n){
-        var wCount = 0
-        var bCount = 0
-
-        for(j in 0 until n){
-            if(matrix[i][j] == 'W')
-                wCount++
-            else
-                bCount++
-        }
-
-        if(wCount == 1){
-            rowIndexes.add(Letter(i, matrix[i].indexOf('W'), 'W'))
-            wRowsCount++
-        }
-        else if(bCount == 1){
-            rowIndexes.add(Letter(i, matrix[i].indexOf('B'), 'B'))
-            bRowsCount++
-        }
-    }
-
-    return Info(rowIndexes, wRowsCount, bRowsCount)
-}
-
-
-fun foo(wRowsCount : Int, bRowsCount : Int, rowIndexes : MutableList<Letter>, matrix: Array<Array<Char>>, n: Int){
-    if(wRowsCount == 0 && bRowsCount == 0)
-        return
-
-    var letter = '0'
-
-    if(wRowsCount > 1 && wRowsCount % 2 == 0 ){
-        letter = 'W'
-    } else if (bRowsCount > 1 && bRowsCount % 2 == 0){
-        letter = 'B'
-    }
-
-    var row = 0
-    var col = 0
-
-    var flag = true
-    var count = 0
-
-    var toRemove = mutableListOf<Letter>()
-
-    rowIndexes.forEach{
-        if(count != 2 && it.letter == letter){
-            if(flag){
-                row = it.row
-                flag = false
-            }
-            else
-                col = it.col
-            count++
-            toRemove.add(it)
-        }
-    }
-
-    rowIndexes.removeAll(toRemove)
-
-    change(row, col, matrix, n)
-
-    var newWRowsCount = wRowsCount
-    var newBRowsCount = bRowsCount
-
-    if(letter == 'B'){
-        newBRowsCount-=2
-    } else {
-        newWRowsCount-=2
-    }
-
-    foo(newWRowsCount, newBRowsCount, rowIndexes, matrix, n)
-}
-
 
 fun change(row : Int, col : Int, matrix: Array<Array<Char>>, n : Int){
     for(i in 0 until n){
@@ -169,3 +206,5 @@ fun printMatrix(matrix : Array<Array<Char>>){
         println()
     }
 }
+
+class Cell (val row : Int, val col : Int)

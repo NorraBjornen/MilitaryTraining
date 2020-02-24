@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ead6ec66-4c44-45e5-8986-b5d8c2b02f9a" name="Default Changelist" comment="" />
+    <list default="true" id="ead6ec66-4c44-45e5-8986-b5d8c2b02f9a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MilitaryTraining/Letter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MilitaryTraining/MainKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MilitaryTraining/MainKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Info.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Letter.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,10 +25,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1YFRB72l9jiykMIVD95pgBGupPC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -77,6 +88,8 @@
       <option name="presentableId" value="Default" />
       <updated>1582536217901</updated>
       <workItem from="1582536221506" duration="4839000" />
+      <workItem from="1582557391743" duration="127000" />
+      <workItem from="1582561788096" duration="2872000" />
     </task>
     <servers />
   </component>
@@ -88,96 +101,115 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1582536278781" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1582541065585">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1582564463140">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582541065585" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1582541065585">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582564463140" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1582564463140">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582541065585" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1582541065585">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582564463140" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1582564463140">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582541065585" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1582541065585">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582564463140" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1582564463140">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582541065585" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1582541065586">
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582564463140" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1582563684987">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582541065586" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1582541065585">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582563684987" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1582563684987">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582541065585" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1582541065585">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582563684987" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1582563684986">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582541065585" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1582541065586">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582563684986" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1582563684987">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582541065586" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582563684987" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1582563509394">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1582563509394" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/Main.kt</url>
-          <line>87</line>
-          <option name="timeStamp" value="6" />
+          <line>106</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/Main.kt</url>
-          <line>90</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/Main.kt</url>
-          <line>92</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/Main.kt</url>
-          <line>118</line>
-          <option name="timeStamp" value="11" />
+          <line>119</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/Main.kt</url>
           <line>120</line>
-          <option name="timeStamp" value="12" />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/Main.kt</url>
+          <line>125</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/Main.kt</url>
+          <line>132</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/Main.kt</url>
+          <line>136</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/Main.kt</url>
+          <line>145</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/Main.kt</url>
+          <line>144</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/Main.kt</url>
+          <line>143</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/Main.kt</url>
+          <line>138</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/Main.kt</url>
+          <line>127</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/Main.kt</url>
+          <line>122</line>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/Main.kt</url>
           <line>121</line>
-          <option name="timeStamp" value="13" />
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/Main.kt</url>
-          <line>129</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/Main.kt</url>
-          <line>126</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/Main.kt</url>
-          <line>124</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/Main.kt</url>
-          <line>85</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/Main.kt</url>
-          <line>106</line>
-          <option name="timeStamp" value="20" />
+          <line>133</line>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
